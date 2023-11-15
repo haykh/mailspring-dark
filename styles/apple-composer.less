@@ -22,7 +22,7 @@
 
 // Replacing focused state with theme accent
 #message-list .message-item-wrap .message-item-white-wrap.composer-outer-wrap {
-  background: white;
+  background: darken(@background, 10%);
   &.focused {
     box-shadow: 0 0 0 1px @accent;
   }
@@ -33,7 +33,7 @@
   .dropdown-component
   .signature-button-dropdown
   .only-item {
-  background: white;
+  background: darken(@background, 10%);
 }
 
 // make action bar at bottom of composer a bit darker than background
@@ -169,17 +169,17 @@ body.platform-win32 .token {
 }
 
 body.platform-win32 .token:hover {
-  background: #E9E9E9 !important;
+  background: lighten(@background, 35%) !important;
 }
 
 body.platform-win32 .token.selected:hover {
-  background: #c2c2c2 !important;
+  background: lighten(@background, 35%) !important;
   border: 1px solid #b9b9b9 !important;
   color: white !important;
 }
 
 .tokenizing-field .token.selected, .tokenizing-field .token.dragging {
-  background: #b3b3b3 !important;
+  background: lighten(@background, 35%) !important;
   border: 1px solid #aaaaaa !important;
   border-radius: 3px;
   margin: 0 4px 0 0;
@@ -204,7 +204,7 @@ body.platform-win32 .token.selected:hover {
 }
 
 .menu .item.selected {
-  background: #D0D0D0 !important;
+  background: lighten(@background, 25%) !important;
   color: @background !important;
   border-radius: @border-radius;
 }
