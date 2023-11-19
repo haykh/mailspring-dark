@@ -22,9 +22,8 @@
 
 // Replacing focused state with theme accent
 #message-list .message-item-wrap .message-item-white-wrap.composer-outer-wrap {
-  background: darken(@background, 10%);
   &.focused {
-    box-shadow: 0 0 0 1px @accent;
+    box-shadow: 0 0 0 2px lighten(@accent, 10%);
   }
 }
 
@@ -33,7 +32,6 @@
   .dropdown-component
   .signature-button-dropdown
   .only-item {
-  background: darken(@background, 10%);
 }
 
 // make action bar at bottom of composer a bit darker than background
@@ -42,7 +40,7 @@
     background: transparent;
   }
   &.focused .composer-action-bar-wrap {
-    background: darken(@background, 1%);
+    background: darken(@background, 5%);
   }
 }
 
@@ -192,7 +190,7 @@ body.platform-win32 .token.selected:hover {
 }
 
 .tokenizing-field .token.selected .action img, .tokenizing-field .token.dragging .action img {
-  background-color: white !important;
+  background-color: @background !important;
 }
 
 #message-list > div.messages-wrap.ready.scroll-region > div.scroll-region-content > div > div.footer-reply-area-wrap > div > img {
@@ -205,38 +203,28 @@ body.platform-win32 .token.selected:hover {
 
 .menu .item.selected {
   background: lighten(@background, 25%) !important;
-  color: @background !important;
   border-radius: @border-radius;
-}
-
-.menu .item.selected .primary, .menu .item:active .primary {
-  color: @background;
+  color: white !important;
+  .primary, .secondary {
+    color: white !important;
+  }
 }
 
 .tokenizing-field .content-container {
   border: 1px solid #dddddd;
   box-shadow: none;
   border-radius: 2px;
-  background-color: #E9E9E9;
   position: absolute;
   z-index: 3;
   border-radius: 6px !important;
 }
 
-body.is-blurred .tokenizing-field .token:not(.invalid) {
-  background: #E9E9E9;
-}
-
 .tokenizing-field .token.invalid, .tokenizing-field .token.invalid:hover, .tokenizing-field .token.invalid.selected, .tokenizing-field .token.invalid.dragging {
-  color: @background !important;
+  color: white !important;
   background: rgb(255, 180, 180) !important;
   border: none;
   box-shadow: none;
 }
-
-// .composer-inner-wrap .composer-action-bar-wrap, .composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
-//   background: white !important;
-// }
 
 body.platform-win32 .token.invalid:hover {
   color: @background !important;
